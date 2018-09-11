@@ -53,8 +53,39 @@ function draw()
     ctx.lineTo(500, 175);
     ctx.fillStyle = "rgb(0, 167, 214)";
     ctx.fill();
-
+    ctx.strokeStyle="rgba(0, 0, 0, 255";
+    ctx.beginPath();
+    ctx.moveTo(270, 250);
+    ctx.lineTo(290, 245);
+    ctx.lineTo(275, 230);
+    ctx.lineTo(296, 238);
+    ctx.lineTo(300, 215);
+    ctx.lineTo(305, 238);
+    ctx.lineTo(320, 230);
+    ctx.lineTo(308, 245);
+    ctx.lineTo(330, 248);
+    ctx.lineTo(308, 252);
+    ctx.lineTo(318, 265);
+    ctx.lineTo(302, 258);
+    ctx.lineTo(300, 273);
+    ctx.lineTo(294, 258);
+    ctx.lineTo(282, 267);
+    ctx.lineTo(290, 255);
+    ctx.lineTo(270, 250);
+    ctx.fillStyle = "rgb(255, 255, 255)";
+    ctx.fill();
     ctx.stroke();
     
     
+}
+
+drawNLines(12, 40, 40, 40);
+
+function drawNLines(N, centreX, centreY, radius) {
+  for (i = 0; i < N; i++) {
+    angle = 360 / N;
+    x2 = centreX + radius * Math.cos(Math.PI * angle * i / 180);
+    y2 = centreY + radius * Math.sin(Math.PI * angle * i / 180);
+    DrawLine(centreX, centreY, x2, y2);
+  }
 }
