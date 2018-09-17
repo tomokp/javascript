@@ -72,7 +72,7 @@ function draw()
     ctx.lineTo(282, 267);
     ctx.lineTo(290, 255);
     ctx.lineTo(270, 250);
-    ctx.fillStyle = "rgb(255, 255, 255)";
+    ctx.fillStyle = "rgba(255, 255, 255, 1)";
     ctx.fill();
     ctx.stroke();
     
