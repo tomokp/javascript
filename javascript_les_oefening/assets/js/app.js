@@ -42,3 +42,6 @@ else {
       console.log("1400 is niet gelijk aan Naboo.") //in elk ander geval dat "number" is niet gelijk aan "place" zegt de console; 1400 is niet geljk aan Naboo.
 }
 //dit is geen slimme vraag omdat je er niks aan hebt om een nummer met een woord zonder waarde te vergelijken sinds daar eigenlijk weinigs zinnigs uit komt.
+
+//einde
+
