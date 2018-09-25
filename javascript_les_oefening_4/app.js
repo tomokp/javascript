@@ -28,6 +28,6 @@ var basenumber = 0;
 var numbers = [2, 4, 8, 9, 12, 13];
 var numberLength = numbers.length;
 for (let i=0; i<numberLength; i++){
-    basenumber = basenumber+numbers[i];
+    basenumber = basenumber+numbers[i];  
 }
 console.log(basenumber);
