@@ -52,10 +52,12 @@ fibonacci(6);
 console.log("-----countdown------:")
 
 function countDown(startNumber){
+    var fireWork = new Audio("ali.mp3");
     for (startNumber; startNumber>-1; startNumber--){
         console.log(startNumber);
         if (startNumber==0){
             console.log("Happy 2018");
+            fireWork.play();
         }
     }
 
