@@ -52,7 +52,7 @@ fibonacci(6);
 console.log("-----countdown------:")
 
 function countDown(startNumber){
-    var fireWork = new Audio("ali.mp3");
+    var fireWork = new Audio("firework.mp3");
     for (startNumber; startNumber>-1; startNumber--){
         console.log(startNumber);
         if (startNumber==0){
@@ -79,3 +79,9 @@ function hoisting(){ //dit zijn 4 volgordes om iets een waarde te geven en dan t
     d = 4;
 }
 hoisting();
+
+function sound(nameOfSound){
+    actualSound = new Audio(nameOfSound+".mp3");
+    actualSound.play();    
+}
+sound("ali");
