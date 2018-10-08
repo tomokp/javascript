@@ -59,6 +59,55 @@
 
 // createTable();
 
+var gradeOne 
+var gradeTotal = 0;
+for(i = 1 ; i <= 4 ; i++){
+gradeOne = document.getElementById('course'+i).innerText;
+if((gradeOne[gradeOne.length-3]==1) || (gradeOne[gradeOne.length-3]==2) || (gradeOne[gradeOne.length-3]==3) || (gradeOne[gradeOne.length-3]==4) || 
+    (gradeOne[gradeOne.length-3]==5) || (gradeOne[gradeOne.length-3]==6) || (gradeOne[gradeOne.length-3]==7) || (gradeOne[gradeOne.length-3]==8) ||
+    (gradeOne[gradeOne.length-3]==9)){
+    numberGradeOne = (parseFloat(gradeOne[gradeOne.length-3])+ parseFloat(gradeOne[gradeOne.length-1]/10));
+    
+    }
 
-const gradeOne = document.getElementById('course1').innerText;
-console.log(gradeOne[gradeOne.length-1]);
+    else {
+        numberGradeOne = parseFloat(gradeOne[gradeOne.length-1])
+    }
+    gradeTotal = parseFloat(gradeTotal+numberGradeOne);
+    console.log(numberGradeOne);
+    console.log(gradeTotal);
+}   
+var gradeAverage = parseFloat(gradeTotal/4);
+//document.write("het gemiddelde is", " : ",gradeAverage);
+
+function addAverage() {
+    let table = document.getElementById("grades");
+    let row = table.insertRow(4);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    cell1.innerHTML = "gemiddelde is: ";
+    cell2.innerHTML = gradeAverage.toFixed(2);
+}
+
+addAverage();
+
+
+
+
+const color = document.getElementById("forColors");
+color.classList.add("colors");
+console.log(color);
+
+
+
+
+
+function image(src, height, width) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.height = height;
+    img.width = width;
+    document.body.appendChild(img);
+}
+
+image("random.gif", 150, 150);
