@@ -54,7 +54,7 @@ function clickEventHandler(event){                         //dit is mijn functie
         let cell3 = row.insertCell(2);
         cell3.id = "idTest"
         var btn = document.createElement("BUTTON");
-        var t = document.createTextNode("CLICK ME");
+        var t = document.createTextNode("Remove product");
         btn.appendChild(t);
         document.getElementById("idTest").appendChild(btn);
 
