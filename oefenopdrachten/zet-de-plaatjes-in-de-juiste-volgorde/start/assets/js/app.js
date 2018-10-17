@@ -87,13 +87,19 @@ document.getElementById(2).onclick = function () {
         var img2 = document.getElementById(2);
         img2.classList.add("border-green");
         k = k + 1
+        tries = tries - 1;
+        checkTries();
+        document.getElementById("score").innerHTML = "<h2>gefelicteerd! je hebt gewonnen</h2>";
+        setTimeout(reload, 1500);
     }
     else {
         console.log("fout");
+        tries = tries - 1;
+        checkTries();
     }
-    tries = tries - 1;
+    
     console.log(tries);
-    checkTries();
+    
 }
 
 document.getElementById(3).onclick = function () {
@@ -113,7 +119,7 @@ document.getElementById(3).onclick = function () {
 function checkTries(){
     if(tries==0){
         document.getElementById("score").innerHTML = "<h2>Je hebt verloren, helaas.</h2>";
-        setTimeout(reload, 1000);
+        setTimeout(reload, 500);
 
     }
     else {
